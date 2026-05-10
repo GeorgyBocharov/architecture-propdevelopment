@@ -1,0 +1,123 @@
+@startuml PropDevelopment Container TOBE
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(client, "Клиент")
+Person(tenant, "Собственник")
+Person(clientManager, "Менеджер")
+Person(ba, "Бизнес-аналитик")
+Person(accountant, "Бухгалтер")
+
+AddElementTag("pink", $bgColor="pink", $borderColor="red")
+
+System_Boundary(clientMart, "Система продаж недвижимости") {
+    Container(vitrina, "Витрина продаж", "JavaScript, React", "Витрина для подбора и бронирования объектов недвижимости")
+    Container(managerUI, "ЛК Менеджера", "JavaScript, React", "Витрина для подбора и бронирования объектов недвижимости")
+    Container(clientMartApp, "client-mart-app", "Kotlin, SpringBoot", "Приложение для предоставления услуг клиентам")
+    Container(clientMartEstateApp, "client-mart-estate-app", "Kotlin, SpringBoot", "Приложение для управления информацией об объектах недвижимости")
+    Container(clientTourApp, "client-tour-app", "Kotlin, SpringBoot", "Приложение для проведения онлайн-туров")
+
+    ContainerDb(clientMartDb, "client-mart-db", "PostgreSQL", "База данных для хранения информации об объектах недвижимости и сделкам")
+    ContainerDb(clientMartEstateDb, "client-mart-estate-db", "PostgreSQL", "База данных объектов недвижимости")
+    ContainerDb(clientTourDb, "client-tour-db", "PostgreSQL", "База данных проведения онлайн-тура")
+    ContainerDb(crmDb, "crm-db", "MSSQL", "База данных системы CRM")
+    ContainerDb(clientCrmApp, "client-crm-app", "Dynamics CRM", "Система управления клиентскими данными")
+}
+
+System_Boundary(authSystem, "Система аутентификации") {
+    Container(authService, "auth-service", "Keycloak", "Сервис аутентификации")
+    ContainerDb(authDb, "auth-db", "PostgreSQL", "База данных сервиса аутентификации")
+    Container(activeDirectory, "Active Directory", "MS Active Directory", "Служба каталогов для аутентификации")
+}
+
+System_Boundary(tenantMgmt, "Система контроля собственности") {
+    Container(tenantCoreApp, "tenant-core-app", "Kotlin, SpringBoot", "Приложение для предоставления услуг собственникам")
+    Container(tenantMartApp, "Витрина сервисов для собственников", "Mobile app (iOS, Android)", "Мобильные приложения для собственников")
+    Container(crm, "CRM", "Kotlin, Spring Boot", "Система управления данными собственников")
+    Container(smartHomeAdapter, "smart-home-adapter", "Kotlin, SpringBoot", "Адаптер для интеграции с устройствами умного дома", $tags="pink")
+    Container(smartHomeProcessor, "smart-home-processor", "Kotlin, SpringBoot", "Процессор для управления устройствами", $tags="pink")
+    ContainerDb(crmTenantDb, "crm-tenant-db", "PostgreSQL", "База данных CRM по собственникам")
+    ContainerDb(tenantCoreDb, "tenant-core-db", "PostgreSQL", "База данных услуг ЖКХ по собственникам")
+    Container(smartHomeProcessorDb, "smartHomeProcessorDB", "PostgreSQL", "База управления устройствами с обезличенными данными", $tags="pink")
+    ContainerDb(tenantSensitiveDb, "tenant-sensitive-db", "PostgreSQL + pgcrypto", "Хранение зашифрованных данных собственников (биометрия, номера машин)", $tags="pink")
+}
+
+System(vault, "HashiCorp Vault", "Хранение ключей шифрования для чувствительных данных", $tags="pink")
+
+System_Boundary(accountantSystem, "Система бухгалтерского учета") {
+    Container(accountantService, "accountant-service", "Keycloak", "Система бухгалтерского учёта")
+    ContainerDb(accountantDb, "accountant-db", "PostgreSQL", "Хранение отчетов")
+    Container(accountantAuthService, "Accoutant Auth", "Active Directory", "Аутентификация бухгалтера")
+}
+
+System_Boundary(dwhSystem, "Система анализа данных") {
+    Container(dwh, "Хранилище данных", "Greenplum", "Единое хранилище данных для всех систем компании")
+    Container(dwhStorage, "DWH Хранилище", "S3", "Физическое хранилище данных DWH")
+    Container(auditMQ, "События Аудита", "Kafka", "Аудит с обезличенными данными (действия по userID)", $tags="pink")
+}
+
+System_Ext(gosReg, "Государственные регистрационные органы", "Отвечают за регистрационные действия с объектами недвижимости")
+System_Ext(communalService, "Поставщик ресурсов ЖКХ", "")
+System_Ext(paymentSystem, "Платёжная система", "Провайдер онлайн-платежей")
+System_Ext(smartHomeProvider, "API управления устройствами умного дома", "Провайдер сервисов умного дома", $tags="pink")
+
+Rel(client, vitrina, "Выбор недвижимости, оформление сделки")
+Rel(vitrina, clientTourApp, "Проведение онлайн-тура")
+Rel(vitrina, clientCrmApp, "Регистрация клиента")
+Rel(tenant, tenantMartApp, "Контроль недвижимости, оплата ЖКХ, управление устройствами")
+Rel(clientManager, managerUI, "Работа с клиентами и объектами недвижимости")
+Rel(managerUI, clientMartApp, "Работа с объектами недвижимости и сделками")
+Rel(managerUI, clientCrmApp, "Работа с клиентами")
+Rel(managerUI, activeDirectory, "Аутентификация менеджера")
+
+Rel(ba, activeDirectory, "Аутентификация бизнес-аналитика")
+Rel(ba, dwhSystem, "Анализ данных")
+
+
+Rel(accountant, accountantService, "Составление налоговых отчетов")
+Rel(accountantService, accountantDb, "Сохренение отчетов")
+Rel(accountantService, accountantAuthService, "Аутентификация")
+
+Rel(vitrina, authService, "Регистрация/Аутентификация [REST]")
+Rel(vitrina, clientMartEstateApp, "Получение данных по объектам недвижимости [REST]")
+Rel(vitrina, clientMartApp, "Получение данных [REST]")
+
+Rel(clientMartApp, clientMartDb, "JDBC")
+Rel(clientMartApp, authService, "Аутентификация менеджеров")
+Rel(clientMartApp, clientMartEstateApp, "Публикация каталога объектов [Kafka]")
+Rel(clientMartEstateApp, clientMartEstateDb, "JDBC")
+
+Rel(clientTourApp, clientTourDb, "JDBC")
+
+
+Rel(tenantCoreApp, tenantCoreDb, "JDBC")
+Rel(tenantCoreApp, crm, "Получение клиентских данных [REST]")
+Rel(tenantCoreApp, communalService, "Запрос данных по счетчикам")
+Rel(tenantCoreApp, paymentSystem, "Оплата платежей")
+
+Rel(tenantMartApp, authService, "Аутентификация [REST]")
+Rel(tenantMartApp, tenantCoreApp, "Управление платежами, просмотр ремонта", "Rest, WS")
+Rel(tenantMartApp, smartHomeProcessor, "Управление устройствами умного дома [REST]")
+Rel(authService, authDb, "JDBC")
+
+Rel(crm, crmTenantDb, "JDBC")
+Rel(crm, activeDirectory, "Аутентификация менеджеров")
+
+Rel(clientCrmApp, crmDb, "JDBC")
+Rel(clientCrmApp, clientMartApp, "Получение данных [REST]")
+Rel(clientMartApp, gosReg, "Регистрация сделки [СМЭВ SOAP]")
+
+Rel(dwh, dwhStorage, "Хранение данных")
+Rel(auditMQ, dwh, "Сохранение данных аудита (обезличенных)")
+Rel(clientMartDb, dwh, "Передача сырых данных [CDC]")
+Rel(clientMartEstateDb, dwh, "Передача сырых данных [CDC]")
+Rel(crmTenantDb, dwh, "Передача сырых данных [CDC]")
+Rel(tenantCoreDb, dwh, "Передача сырых данных [CDC]")
+
+Rel(smartHomeProcessor, smartHomeAdapter, "Управление устройствами, сравнение биометрии", "HTTPS/WSS")
+Rel(smartHomeAdapter, smartHomeProvider, "Интеграция с устройствами умного дома", "HTTPS/WSS")
+Rel(smartHomeProcessor, tenantSensitiveDb, "Запись/чтение зашифрованных данных", "TCP")
+Rel(smartHomeProcessor, smartHomeProcessorDb, "Запись/чтение обезличенных данных об устройствах", "TCP")
+Rel(smartHomeProcessor, vault, "Запрос ключей для шифрования чувстительных данных", "HTTPS")
+Rel(smartHomeProcessor, auditMQ, "Отправка событий аудита по устройствам умного дома", "Kafka")
+
+@enduml

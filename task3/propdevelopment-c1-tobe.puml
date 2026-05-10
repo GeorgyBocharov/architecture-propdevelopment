@@ -1,0 +1,36 @@
+@startuml PropDevelopment Context TOBE
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Person(tenant, "Собственник")
+Person(client, "Покупатель")
+Person(clientManager, "Менеджер продаж")
+Person(accountant, "Бухгалтер")
+Person(ba, "Бизнес-аналитик")
+
+System(clientMart, "Система продаж недвижимости")
+System(tenantMgmt, "Система контроля собственности")
+System(accountantSystem, "Система бухгалтерского учета")
+System(dwh, "Система анализа данных")
+
+
+System_Ext(gosReg, "Регистрация сделок по недвижимости")
+System_Ext(communalService, "Поставщик ресурсов ЖКХ")
+System_Ext(paymentSystem, "Платежная система")
+System_Ext(smartHomeProvider, "API управления устройствами умного дома")
+
+Rel(client, clientMart, "Выбор недвижимости, оформление сделки")
+Rel(clientManager, clientMart, "Помощь в выборе недвижимости и сопровождение сделки")
+Rel(clientMart, dwh, "Отправка данных для анализа")
+Rel(clientMart, gosReg, "Регистрация сделки")
+
+Rel(tenant, tenantMgmt, "Контроль недвидимости, оплата жкх, отслеживание ремонта, управление устройствами")
+Rel(tenantMgmt, communalService, "запрос данных по счетчикам для оплаты")
+Rel(tenantMgmt, paymentSystem, "Оплата платежей")
+Rel(tenantMgmt, smartHomeProvider, "Управление устройствами")
+Rel(tenantMgmt, dwh, "Отправка данных для анализа")
+
+Rel(accountant, accountantSystem, "Составление налоговых отчетов")
+Rel(ba, dwh, "Анализ данных")
+
+
+@enduml

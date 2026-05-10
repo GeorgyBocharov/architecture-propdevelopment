@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="Страница — 1" id="auWoeGow88EZ26LjdiPY">
+    <mxGraphModel dx="2859" dy="1562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-1" target="TNTB4YwcxjnjF5HKFAU1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-1" target="TNTB4YwcxjnjF5HKFAU1-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-1" target="TNTB4YwcxjnjF5HKFAU1-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-1" target="TNTB4YwcxjnjF5HKFAU1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-1" value="Безопасность данных" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="370" y="150" width="136" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-2" target="TNTB4YwcxjnjF5HKFAU1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-2" value="&lt;b&gt;Публичные данные&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1) Данные о продаваемых объектах (адрес, цена, срок сдачи)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2) Онлайн туры квартир&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;3) Справочная информация (процесс бронирования, покупки)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="290" width="150" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-3" target="TNTB4YwcxjnjF5HKFAU1-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Внутренние данные&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1) Статистика продаж и другие отчеты&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2) Скрипты для менеджеров&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3) Статистика работы микросервисов, логи&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;4) Аудит пользователей (анонимизированный)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="268" y="290" width="146" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-4" target="TNTB4YwcxjnjF5HKFAU1-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-4" value="&lt;b&gt;Конфиденциальные данные&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;1) Персональные данные клиентов и жильцов&lt;/div&gt;&lt;div&gt;2) Показания ЖКУ для жильцов, данные управляющей компаний&lt;/div&gt;&lt;div&gt;3) Данные об устройствах умного дома&lt;/div&gt;&lt;div&gt;4) Данные о ремонте&lt;/div&gt;&lt;div&gt;5) Финансовые отчеты&lt;/div&gt;&lt;div&gt;6) Данные ценообразования&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="290" width="190" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-5" target="TNTB4YwcxjnjF5HKFAU1-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-5" value="&lt;b&gt;Секретные данные&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1) Платежные данные клиентов и жильцов&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="290" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-17" target="TNTB4YwcxjnjF5HKFAU1-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-17" value="&lt;b&gt;Риски&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;1)&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Потеря данных -&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;критический&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2)&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Искажение данных -&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;значительный&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3) Некачественные данные - &lt;b&gt;незначительный&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-195" y="610" width="275" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-18" target="TNTB4YwcxjnjF5HKFAU1-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-18" value="&lt;b&gt;Риски&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;1) Потеря данных -&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;значительный&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;2) Утечка данных - &lt;b&gt;значительный&lt;/b&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="190" y="605" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-19" target="TNTB4YwcxjnjF5HKFAU1-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-19" value="&lt;b&gt;Риски&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1) Утечка данных - &lt;b&gt;критический&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;2) Потеря данных - &lt;b&gt;значительный&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="550" y="600" width="202" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="TNTB4YwcxjnjF5HKFAU1-20" target="TNTB4YwcxjnjF5HKFAU1-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-20" value="&lt;div&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Риски&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;1) Утечка&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;данных - &lt;b&gt;критический&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="850" y="605" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-25" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Потеря данных - риск утраты данных об объектах, выставленных на продажу и, как следствие, финансовые и репутационные потери&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Искажение данных - риск изменения цен на объекты&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Некачественные данные - некорректные инструкции по покупке/бронированию могут повлечь жалобы клиентов и репутационные потери&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-207.5" y="820" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-39" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Потеря данных - риск утраты данных по статистке продаж и отчетам&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Утечка данных - риск доступа к инсайдерской информации&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="155" y="820" width="270" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-40" value="&lt;div&gt;Утечка данных - критический риск, финансовые потери (штрафы), репутационные риски&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Потеря данных - потеря жильцами доступа к документам на владение недвижимостью, потеря доступа к устройствам умного дома (риск не выключить важное устройств (обогрев))&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="501" y="820" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="TNTB4YwcxjnjF5HKFAU1-41" value="&lt;span style=&quot;text-align: left;&quot;&gt;Утечка данных - критический риск, финансовые потери (штрафы), репутационные риски&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="845" y="820" width="210" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
